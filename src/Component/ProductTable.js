@@ -1,28 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ProductTable = ({ products }) => {
-  const prodTab = products.map(
-    (el) =>
-      (el = ({ products }) => {
-        return (
-          <React.Fragment>
-            <table>
-              <tr>
-                <th> Name </th>
-                <th> Price </th>
-                <th> Category </th>
-              </tr>
-              <tr>
-                <td> {el.Name} </td>
-                <td> {el.Price} </td>
-                <td> {el.Category} </td>
-              </tr>
-            </table>
-          </React.Fragment>
-        );
-      })
+  // console.log(props);
+
+  return (
+    <React.Fragment>
+      <table>
+        <tr>
+          <th> Name </th>
+          <th> Price </th>
+          <th> Category </th>
+        </tr>
+        {products.map((produit) => (
+          <tr>
+            <td> {produit.Name} </td>
+            <td> {produit.Price} </td>
+            <td> {produit.Category} </td>
+          </tr>
+        ))}
+      </table>
+    </React.Fragment>
   );
-  return prodTab;
 };
 
 export default ProductTable;

@@ -11,7 +11,7 @@ function App() {
   ];
   return (
     <React.Fragment className="App">
-      <ProductTable data={products} />
+      <ProductTable products={products} />
     </React.Fragment>
   );
 }
